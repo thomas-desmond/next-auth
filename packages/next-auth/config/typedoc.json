@@ -3,7 +3,14 @@
   "allReflectionsHaveOwnDocument": true,
   "disableSources": true,
   "hideBreadcrumbs": true,
-  "entryPoints": ["../src/index.ts"],
+  "entryPoints": [
+    "../src/index.ts",
+    "../src/jwt/index.ts",
+    "../src/next/index.ts",
+    "../src/react/index.ts",
+    "../src/adapters.ts",
+    "../src/middleware.ts"
+  ],
   "excludeExternals": true,
   "excludePrivate": true,
   "excludeProtected": true,
