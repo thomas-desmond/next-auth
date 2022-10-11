@@ -42,6 +42,7 @@
     "clean": "rm -rf coverage client css utils providers core jwt react next index.d.ts index.js adapters.d.ts middleware.d.ts middleware.js",
     "build:css": "postcss --config config/postcss.config.js src/**/*.css --base src --dir . && node config/wrap-css.js",
     "dev": "pnpm clean && pnpm generate-providers && concurrently \"pnpm watch:css\" \"pnpm watch:ts\"",
+    "docs": "typedoc --options config/typedoc.json",
     "watch:ts": "pnpm tsc --project tsconfig.dev.json",
     "watch:css": "postcss --config config/postcss.config.js --watch src/**/*.css --base src --dir .",
     "test": "jest --config ./config/jest.config.js",
@@ -126,6 +127,8 @@
     "postcss-nested": "^5.0.6",
     "react": "^18",
     "react-dom": "^18",
+    "typedoc": "^0.23.16",
+    "typedoc-plugin-markdown": "^3.13.6",
     "whatwg-fetch": "^3.6.2"
   },
   "engines": {
