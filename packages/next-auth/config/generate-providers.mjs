@@ -1,9 +1,9 @@
-const path = require("path")
-const fs = require("fs")
+import { join } from "path"
+import { readdirSync, writeFileSync } from "fs"
 
-const providersPath = path.join(process.cwd(), "src/providers")
+const providersPath = join(process.cwd(), "src/providers")
 
-const files = fs.readdirSync(providersPath, "utf8")
+const files = readdirSync(providersPath, "utf8")
 
 const providers = files.map((file) => {
   const strippedProviderName = file.substring(0, file.indexOf("."))
@@ -15,4 +15,4 @@ const result = `
 export type OAuthProviderType = 
   | ${providers.join("\n  | ")}`
 
-fs.writeFileSync(path.join(providersPath, "oauth-types.ts"), result)
+writeFileSync(join(providersPath, "oauth-types.ts"), result)

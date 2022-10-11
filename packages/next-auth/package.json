@@ -47,7 +47,7 @@
     "watch:css": "postcss --config config/postcss.config.js --watch src/**/*.css --base src --dir .",
     "test": "jest --config ./config/jest.config.js",
     "prepublishOnly": "pnpm build",
-    "generate-providers": "node ./config/generate-providers.js",
+    "generate-providers": "node ./config/generate-providers.mjs",
     "lint": "eslint src config tests"
   },
   "files": [
